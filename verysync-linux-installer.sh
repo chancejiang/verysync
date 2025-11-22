@@ -96,6 +96,7 @@ install_verysync() {
         sudo chmod +x /etc/init.d/verysync
         
         # Runit service
+        sudo mkdir -p /etc/sv/verysync
         sudo cp -r /tmp/verysync-linux-$ARCH/etc/linux-runit/ /etc/sv/verysync/
     fi
     
