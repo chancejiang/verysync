@@ -75,7 +75,7 @@ For automatic installation on Linux systems:
 
 ```bash
 # (If you need to specify the index location, add -d path at the end, e.g., -d /data/verysync)
-curl -k https://github.com/chancejiang/verysync/raw/master/verysync-linux-installer.sh > verysync-linux-installer.sh
+curl -k https://github.com/chancejiang/verysync/raw/main/verysync-linux-installer.sh > verysync-linux-installer.sh
 chmod +x verysync-linux-installer.sh
 ./verysync-linux-installer.sh
 ```
