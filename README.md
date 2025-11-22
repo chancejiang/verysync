@@ -1,4 +1,4 @@
-# Verysync - 微力同步
+# Verysync
 
 A powerful file synchronization tool that allows you to sync files across multiple devices quickly and securely.
 
