@@ -1,0 +1,41 @@
+name: Release Verysync Packages
+
+on:
+  push:
+    tags:
+      - 'v*'  # Trigger on version tags like v2.21.3
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Create release assets
+      run: |
+        # Create tarballs for each architecture
+        tar -czf verysync-linux-amd64.tar.gz verysync-linux-amd64/
+        tar -czf verysync-linux-arm64.tar.gz verysync-linux-arm64/
+        tar -czf verysync-macos-arm64.tar.gz verysync-macos-arm64/
+        
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        files: |
+          verysync-linux-amd64.tar.gz
+          verysync-linux-arm64.tar.gz
+          verysync-macos-arm64.tar.gz
+          verysync-linux-installer.sh
+          verysync-macos-installer.sh
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Cleanup
+      run: |
+        rm -f verysync-linux-amd64.tar.gz
+        rm -f verysync-linux-arm64.tar.gz
+        rm -f verysync-macos-arm64.tar.gz

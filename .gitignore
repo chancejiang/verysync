@@ -1,0 +1,53 @@
+# Go binaries
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go workspace files
+go.work
+go.work.sum
+
+# Go build directory
+bin/
+pkg/
+
+# Go module files
+go.mod
+go.sum
+
+# IDE directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.clinerules
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+logs/
+*.log
+
+# Configuration files with sensitive data
+.env
+.env.local
+.env.*.local
+
+# Testing files
+coverage.out
+profile.out
+*.test
+
+# Verysync specific files
+*.sig
+verysync-linux-amd64/
+verysync-linux-arm64/
+verysync-macos-arm64/
+verysync_arm64_2.21.3-0.dmg
+verysync-linux-amd64-v2.21.3.tar.gz
+verysync-linux-arm64-v2.21.3.tar.gz
