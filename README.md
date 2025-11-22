@@ -63,23 +63,6 @@ The `verysync-linux-arm64/` directory contains the pre-built Verysync binary for
 
 4. Access the web interface at `http://localhost:8886`
 
-### macOS ARM64 (Apple Silicon, Current Build)
-
-The `verysync-macos-arm64/` directory contains the pre-built Verysync application bundle for macOS ARM64 (Apple Silicon):
-
-1. Navigate to the macOS ARM64 directory:
-   ```bash
-   cd verysync-macos-arm64
-   ```
-
-2. Copy the `verysync.app` bundle to your Applications folder:
-   ```bash
-   cp -r verysync.app /Applications/
-   ```
-
-3. Launch Verysync from the Applications folder.
-
-4. Access the web interface at `http://localhost:8886`
 
 
 ### Automatic Installation
@@ -95,16 +78,6 @@ For automatic installation on Linux systems:
 curl -k https://github.com/chancejiang/verysync/raw/master/verysync-linux-installer.sh > verysync-linux-installer.sh
 chmod +x verysync-linux-installer.sh
 ./verysync-linux-installer.sh
-```
-
-#### macOS (ARM64 - Apple Silicon)
-
-For automatic installation on macOS:
-
-```bash
-curl -k https://github.com/chancejiang/verysync/raw/master/verysync-macos-installer.sh > verysync-macos-installer.sh
-chmod +x verysync-macos-installer.sh
-./verysync-macos-installer.sh
 ```
 
 After installation, you can access the web interface at `http://your-ip-address:8886` to manage your Verysync content.
@@ -124,18 +97,6 @@ After installation, you can access the web interface at `http://your-ip-address:
   -u  --user            Set user to run Verysync service (default: root)
 ```
 
-#### Installer Parameters (macOS)
-
-```bash
-./verysync-macos-installer.sh [-h] [-c] [--remove] [-p proxy] [-f] [--version vx.y.z] [-l file]
-  -h, --help            Show help
-  -p, --proxy           Set proxy server (e.g., -p socks5://127.0.0.1:1080 or -p http://127.0.0.1:3128)
-  -f, --force           Force installation
-      --version         Install specific version (e.g., --version v2.21.3)
-  -l, --local           Install from a local file (absolute path required)
-      --remove          Uninstall Verysync
-  -c, --check           Check for updates
-```
 
 This script will automatically install the following files:
 - `/usr/bin/verysync/verysync`: Verysync main program

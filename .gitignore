@@ -45,9 +45,5 @@ profile.out
 
 # Verysync specific files
 *.sig
-verysync-linux-amd64/
-verysync-linux-arm64/
-verysync-macos-arm64/
-verysync_arm64_2.21.3-0.dmg
-verysync-linux-amd64-v2.21.3.tar.gz
 verysync-linux-arm64-v2.21.3.tar.gz
+verysync-linux-amd64-v2.21.3.tar.gz
